@@ -10,6 +10,7 @@ import { ResourceDetailsComponent } from './component/resource-details/resource-
 import { FooterComponent } from './component/footer/footer.component';
 import { LoginComponent } from './component/login/login.component';
 import { UserCRUDComponent } from './component/user-crud/user-crud.component';
+import { RegisterComponent } from './component/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserCRUDComponent } from './component/user-crud/user-crud.component';
     ResourceDetailsComponent,
     FooterComponent,
     LoginComponent,
-    UserCRUDComponent
+    UserCRUDComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
