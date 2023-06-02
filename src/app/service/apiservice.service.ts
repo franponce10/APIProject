@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../model/user';
 import { Resource } from '../model/resource';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,24 +13,24 @@ export class APIserviceService {
 
   }
 
-  getListUsers(){
+  getListUsers(): Observable<User[]>{
     let body = `https://reqres.in/api/users`;
-    this.http.get<User[]>(body)
+    return this.http.get<User[]>(body);
   }
 
-  getSingleUser(id: number){
+  getSingleUser(id: number): Observable<User>{
     let body = `https://reqres.in/api/users/${id}`;
-    this.http.get<User>(body)
+    return this.http.get<User>(body);
   }
 
-  getListResources(){
+  getListResources(): Observable<Resource[]>{
     let body = `https://reqres.in/api/unknown`;
-    this.http.get<Resource[]>(body)
+    return this.http.get<Resource[]>(body);
   }
 
-  getResource(id: number){
+  getResource(id: number): Observable<Resource>{
     let body = `https://reqres.in/api/unknown/${id}`;
-    this.http.get<Resource>(body)
+    return this.http.get<Resource>(body);
   }
 
 }
