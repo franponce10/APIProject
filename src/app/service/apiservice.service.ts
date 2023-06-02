@@ -22,7 +22,7 @@ export class APIserviceService {
     return this.http.get<UsersRequest>(body);
   }
 
-  getSingleUser(id: number): Observable<UserRequest>{
+  getSingleUser(id: string): Observable<UserRequest>{
     let body = `https://reqres.in/api/users/${id}`;
     return this.http.get<UserRequest>(body);
   }
@@ -32,7 +32,7 @@ export class APIserviceService {
     return this.http.get<ResourcesRequest>(body);
   }
 
-  getResource(id: number): Observable<ResourceRequest>{
+  getResource(id: string): Observable<ResourceRequest>{
     let body = `https://reqres.in/api/unknown/${id}`;
     return this.http.get<ResourceRequest>(body);
   }

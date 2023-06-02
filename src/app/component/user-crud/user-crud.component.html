@@ -1,26 +1,26 @@
 <div class="container">
 <div class="row">
     <div class="col">
-        <img src="" alt="">
+        <img src="{{user.avatar}}" alt="">
     </div>
     <div class="col">
         <div class="row">
             <label>Nombre</label>
-            <input type="text" class="input">
+            <input type="text" class="input" value="{{user.first_name}}">
         </div>
         <div class="row">
             <label>Email</label>
-            <input type="text" class="input">
+            <input type="text" class="input" value="{{user.email}}">
         </div>
     </div>
     <div class="col">
         <div class="row">
             <label>Apellido</label>
-            <input type="text" class="input">
+            <input type="text" class="input" value="{{user.last_name}}">
         </div>
         <div class="row">
             <label>Trabajo</label>
-            <input type="text" class="input">
+            <input type="text" class="input" value="{{user.job}}">
         </div>
     </div>
 </div>

@@ -14,7 +14,11 @@
             <th scope="row">{{user.first_name}}</th>
             <th scope="row">{{user.last_name}}</th>
             <th scope="row">{{user.email}}</th>
-            <th scope="row"><button>Editar</button></th>
+            <th scope="row">
+                <a [routerLink]="['userCrud', user.id]">
+                    <button>Editar</button>
+                </a>
+            </th>
             <th scope="row"><button (click)="delete(user.id)">Borrar</button></th>       
         </tr>
     </tbody>

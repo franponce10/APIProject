@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'listusers', component: UserListComponent},
   {path: 'listresources', component: ResourceListComponent},
-  {path: 'usercrud', component: UserCRUDComponent},
-  {path: 'resourcedetail', component: ResourceDetailsComponent},
+  {path: 'usercrud/:id', component: UserCRUDComponent},
+  {path: 'resourcedetai/:id', component: ResourceDetailsComponent},
   {path: 'register', component: RegisterComponent}
 ];
 

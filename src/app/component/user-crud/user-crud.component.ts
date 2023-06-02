@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { UserRequest } from 'src/app/model/user-request';
 import { APIserviceService } from 'src/app/service/apiservice.service';
@@ -11,12 +12,14 @@ import { CRUDServiceService } from 'src/app/service/crudservice.service';
 })
 export class UserCRUDComponent {
 
-  id: number = 0;
+  @Input() id: string = "";
   user: User = new User(0,"","","","","","", Date.now(), Date.now());
   userRequest: UserRequest = new UserRequest(this.user); 
   
 
-  constructor(private apiService: APIserviceService, private crudService: CRUDServiceService){
+  constructor(private apiService: APIserviceService, private crudService: CRUDServiceService, router: ActivatedRoute){
+
+    this.id = router.snapshot.paramMap.get("id")!;
 
     this.apiService.getSingleUser(this.id).subscribe(data => {
       this.userRequest = data;

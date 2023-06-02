@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Resource } from 'src/app/model/resource';
 import { ResourceRequest } from 'src/app/model/resource-request';
 import { APIserviceService } from 'src/app/service/apiservice.service';
@@ -10,7 +10,7 @@ import { APIserviceService } from 'src/app/service/apiservice.service';
 })
 export class ResourceDetailsComponent {
 
-  id: number = 0;
+  @Input() id: string = "";
   resource: Resource = new Resource(2,"fuchsia rose",2001,"#C74375","17-2031");
   resourceRequest: ResourceRequest = new ResourceRequest(this.resource); 
   
