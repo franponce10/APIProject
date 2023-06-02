@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>LISTADO USUARIOS</h1>
+    <h1>LISTA DE RECURSOS</h1>
 <table class="table table-hover">
     <thead>
         <tr>
@@ -10,10 +10,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of listUsers">
-            <th scope="row">{{user.first_name}}</th>
-            <th scope="row">{{user.last_name}}</th>
-            <th scope="row">{{user.email}}</th>
+        <tr *ngFor="let user of listResource">
+            <th scope="row">{{resource.first_name}}</th>
+            <th scope="row">{{resource.year}}</th>
+            <th scope="row">{{resource.color}}</th>
             <th scope="row"><button>Editar</button></th>       
         </tr>
     </tbody>
