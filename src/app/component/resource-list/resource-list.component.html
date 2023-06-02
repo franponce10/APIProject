@@ -6,15 +6,17 @@
             <th scope="col">NOMBRE</th>
             <th scope="col">AÑO</th>
             <th scope="col">COLOR</th>
+            <th scope="col">Pantone Value</th>
             <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of listResource">
-            <th scope="row">{{resource.first_name}}</th>
+        <tr *ngFor="let resource of listResources">
+            <th scope="row">{{resource.name}}</th>
             <th scope="row">{{resource.year}}</th>
             <th scope="row">{{resource.color}}</th>
-            <th scope="row"><button>Editar</button></th>       
+            <th scope="row">{{resource.pantone_value}}</th>
+            <th scope="row"><button>Detalle</button></th>       
         </tr>
     </tbody>
 </table>
