@@ -1,1 +1,21 @@
-<p>resource-list works!</p>
+<div class="container">
+    <h1>LISTADO USUARIOS</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">AÑO</th>
+            <th scope="col">COLOR</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of listUsers">
+            <th scope="row">{{user.first_name}}</th>
+            <th scope="row">{{user.last_name}}</th>
+            <th scope="row">{{user.email}}</th>
+            <th scope="row"><button>Editar</button></th>       
+        </tr>
+    </tbody>
+</table>
+</div>
