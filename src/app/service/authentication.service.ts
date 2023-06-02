@@ -18,6 +18,15 @@ export class AuthenticationService {
     .subscribe(data => {
       console.log(data);
     });
-
   }
+
+  register(email: string, password: string) {
+    let body = {email : email, password: password};
+
+    this.http.post("https://reqres.in/api/register", body)
+    .subscribe(data => {
+      console.log(data);
+    });
+  }
+
 }

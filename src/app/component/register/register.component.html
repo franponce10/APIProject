@@ -1,1 +1,10 @@
-<p>register works!</p>
+<div class="register">
+    <form class="custom-form" method="post">
+      <h1>Registro</h1>
+      <input type="text" [(ngModel)]="user.email" id ="email" name="tf_email" placeholder="Usuario" required="required"
+      />
+      <input type="text" [(ngModel)]="user.password" id ="password" name="tf_password" placeholder="Contraseña" required="required"
+      />
+      <button type="submit" (click)="register()">Confirmar registro</button>
+    </form>
+  </div>

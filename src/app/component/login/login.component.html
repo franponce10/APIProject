@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="form-login">
     <h5>Formulario Login</h5>
     <input class="controls" type="text" name="tf_email" id="email" [(ngModel)]="user.email" placeholder="Usuario">
@@ -5,3 +6,16 @@
     <button class="buttons" type="submit" (click)="login()">Login</button>
     <p><a routerLink="/register">¿Quieres Registarte?</a></p>
   </section>
+=======
+<div class="container">
+    <div class="row">
+        <input type="text" name="tf_email" id="email" [(ngModel)]="user.email">
+    </div>
+    <div class="row">
+        <input type="text" name="tf_password" id="password" [(ngModel)]="user.password">
+    </div>
+    <div class="row">
+        <button type="submit" (click)="login()">Login</button>
+    </div>
+</div>
+>>>>>>> 91287f4ee88743af479541f6b8111569765a3141
