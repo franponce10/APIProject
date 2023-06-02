@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../model/user';
 import { Resource } from '../model/resource';
 import { Observable, of } from 'rxjs';
+import { UsersRequest } from '../model/users-request';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +14,9 @@ export class APIserviceService {
 
   }
 
-  getListUsers(): Observable<User[]>{
+  getListUsers(): Observable<UsersRequest>{
     let body = `https://reqres.in/api/users`;
-    return this.http.get<User[]>(body);
+    return this.http.get<UsersRequest>(body);
   }
 
   getSingleUser(id: number): Observable<User>{
