@@ -1,9 +1,9 @@
 <div class="register">
     <form class="custom-form" method="post">
       <h1>Registro</h1>
-      <input type="text" name="tf_email" id="email" [(ngModel)]="user.email" placeholder="Usuario" required="required"/>
-      <input type="text" name="tf_password" id="password" [(ngModel)]="user.password" placeholder="Contraseá" required="required"/>
-      <input type="text" name="tf_password" id="password" [(ngModel)]="user.password" placeholder="Repite la contraseña" required="required"
+      <input type="text" [(ngModel)]="user.email" id ="email" name="tf_email" placeholder="Usuario" required="required"
+      />
+      <input type="text" [(ngModel)]="user.password" id ="password" name="tf_password" placeholder="Contraseña" required="required"
       />
       <button type="submit" (click)="register()">Confirmar registro</button>
     </form>
