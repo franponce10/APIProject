@@ -25,6 +25,7 @@ export class UserListComponent {
 
   delete(id: number){
     this.crudService.deleteUser(id);
+    alert("Vas a borrar un usuario")
   }
 
 }

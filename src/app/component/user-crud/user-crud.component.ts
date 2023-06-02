@@ -30,6 +30,8 @@ export class UserCRUDComponent {
 
   create(){
     this.crudService.addUser(this.user);
+    console.log("creado")
+    alert("usuarios")
   }
 
   update() {
