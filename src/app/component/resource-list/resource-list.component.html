@@ -6,7 +6,7 @@
             <th scope="col">NOMBRE</th>
             <th scope="col">AÑO</th>
             <th scope="col">COLOR</th>
-            <th scope="col">Pantone Value</th>
+            <th scope="col">PANTONE VALUE</th>
             <th scope="col"></th>
         </tr>
     </thead>
@@ -16,7 +16,11 @@
             <th scope="row">{{resource.year}}</th>
             <th scope="row">{{resource.color}}</th>
             <th scope="row">{{resource.pantone_value}}</th>
-            <th scope="row"><button>Detalle</button></th>       
+            <th scope="row">
+                <a [routerLink]="['../resourcedetail', resource.id]">
+                    <button>Detalle</button>
+                </a>
+            </th>      
         </tr>
     </tbody>
 </table>
