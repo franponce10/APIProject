@@ -1,24 +1,32 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CRUDServiceService {
 
-  constructor() { 
+  constructor(private http: HttpClient) { 
 
   }
 
-  addUser(){
-
+  addUser(user: User){
+    this.http.post("https://reqres.in/api/users", JSON.stringify(user))
+    .subscribe(data => {
+      console.log(data);
+    });
   }
 
-  updateUser(){
-
+  updateUser(user: User){
+    this.http.put(`https://reqres.in/api/users/${user.id}`, JSON.stringify(user))
+    .subscribe(data => {
+      console.log(data);
+    });
   }
 
-  deleteUser(){
-
+  deleteUser(id: number){
+    this.http.delete(`https://reqres.in/api/users/${id}`);
   }
   
 }

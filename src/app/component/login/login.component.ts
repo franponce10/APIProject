@@ -11,9 +11,10 @@ export class LoginComponent {
 
   user = new User(0,"","","","","","", Date.now(), Date.now());
 
-  constructor(private authetication: AuthenticationService){}
+  constructor(private authentication: AuthenticationService){}
 
   login(){
-    this.authetication.login(this.user.email,this.user.password);
+    this.authentication.login(this.user.email,this.user.password);
   }
+
 }

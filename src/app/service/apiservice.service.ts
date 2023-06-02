@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../model/user';
+import { Resource } from '../model/resource';
 
 @Injectable({
   providedIn: 'root'
@@ -12,20 +13,23 @@ export class APIserviceService {
   }
 
   getListUsers(){
-
+    let body = `https://reqres.in/api/users`;
+    this.http.get<User[]>(body)
   }
 
-  getSingleUser(id: string){
+  getSingleUser(id: number){
     let body = `https://reqres.in/api/users/${id}`;
     this.http.get<User>(body)
   }
 
   getListResources(){
-
+    let body = `https://reqres.in/api/unknown`;
+    this.http.get<Resource[]>(body)
   }
 
-  getResource(){
-
+  getResource(id: number){
+    let body = `https://reqres.in/api/unknown/${id}`;
+    this.http.get<Resource>(body)
   }
 
 }
