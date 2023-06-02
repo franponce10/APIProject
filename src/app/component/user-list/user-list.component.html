@@ -15,7 +15,7 @@
             <th scope="row">{{user.last_name}}</th>
             <th scope="row">{{user.email}}</th>
             <th scope="row"><button>Editar</button></th>
-            <th scope="row"><button>Borrar</button></th>       
+            <th scope="row"><button (click)="delete(user.id)">Borrar</button></th>       
         </tr>
     </tbody>
 </table>

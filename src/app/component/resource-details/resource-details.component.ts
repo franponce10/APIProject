@@ -11,7 +11,7 @@ import { APIserviceService } from 'src/app/service/apiservice.service';
 export class ResourceDetailsComponent {
 
   id: number = 0;
-  resource: Resource = new Resource(0,"",2023,"","");
+  resource: Resource = new Resource(2,"fuchsia rose",2001,"#C74375","17-2031");
   resourceRequest: ResourceRequest = new ResourceRequest(this.resource); 
   
 
